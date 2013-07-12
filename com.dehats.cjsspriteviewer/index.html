@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./styles/style.css"/>
+<title>CREATEJS SPRITE PREVIEW</title>
+</head>
+
+<body>
+    
+  <div role="main">
+
+    <div>      
+      <canvas id="mainCanvas" width="256" height="128" ></canvas>
+    </div>
+
+    <div id="menu">
+      <select id="classSelector">
+      </select>
+
+      <select id="animSelector">
+      </select>
+    </div>
+
+  </div>
+    
+    <div id="content">
+      <ul>
+          <li>
+            <button id="btn_update"
+                    class="controlBg textStyle">
+                    Update Preview</button>
+            </li>
+          
+          
+          <li>
+            <button id="btn_publish"
+                    class="controlBg textStyle">
+                    Publish</button>
+            </li>
+            
+            <hr/>
+            
+            <li>
+                <button id="btn_debug" 
+                        class="controlBg textStyle">
+                        Show dev tools</button>
+            </li>
+            <li>
+                <button id="btn_refresh" 
+                        class="controlBg textStyle">
+                        Reload Panel</button>
+            </li>
+    
+        </ul>
+    </div>
+    
+    <script src="js/libs/CSInterface-4.0.0.js"></script>
+    <script src="js/libs/jquery-1.7.1.min.js"></script>
+    <script src="js/libs/easeljs-0.6.1.min.js"></script>
+
+    <!-- EaselJS lib file -->
+    <script src="sprites/spriteLib.js"></script>
+    <script src="js/spriteViewer.js"></script>
+    <script src="js/themeMgmt.js"></script>
+    <script src="js/main.js"></script>
+
+        
+</body>
+</html>
