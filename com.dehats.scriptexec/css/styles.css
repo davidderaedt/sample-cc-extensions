@@ -1,7 +1,12 @@
 html{
     height:100%;    
 }
-    
+
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box
+}    
 
 body {
     text-align:center;
@@ -12,18 +17,56 @@ body {
 
 
 #content {
+    /*
     margin-right:auto;
     margin-left:auto;
+    */
     vertical-align:middle;
     width:100%;
-    height:100%
+    max-width:100%;
+    height:100%;
+    padding:2px;
 }
 
 #main{
-    width:98%;
-    margin:0px auto;
+    width:100%;
+    /*margin:0px auto;*/
     height:100%;
+    padding:2px;
 }
+
+
+textarea{
+    box-sizing:border-box;    
+    max-width:100%;
+    min-width:100%;    
+}
+
+#codeTA {
+    font-family:monospace;
+    font-size:13px;
+    width: 100%;
+    height:45%;    
+}
+
+#sep {    
+    width:100%;
+    text-align:center;
+    height:10%;
+}
+
+#btn_exec{
+    width:30%;
+}
+
+#resultTA {
+    font-family:monospace;
+    font-size:13px;
+    width:100%;
+    height:45%;    
+    background-color:#DDDDDD;
+}
+
 
 .debugtools{
     margin: 0;
@@ -32,34 +75,11 @@ body {
     text-align: center;
     height:30px;
     bottom:0px;
+    right:0px;
     position:fixed;
 }
 
 .debugtools li {
     display:inline;
     margin:3px 0px 3px 0px;
-}
-
-textarea{
-    box-sizing:border-box;    
-}
-
-#codeTA {
-    font-family:monospace;
-    font-size:13px;
-    width: 100%;
-    height:40%;    
-}
-#resultTA {
-    font-family:monospace;
-    font-size:13px;
-    width:100%;
-    height:30%;    
-    background-color:#DDDDDD;
-}
-
-
-#btn_exec{
-    display:block;
-    
 }

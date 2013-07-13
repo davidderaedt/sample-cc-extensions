@@ -37,11 +37,17 @@
     }
     
     function execCode() {
+        
         var code = $("#codeTA").val();
+            
+        var codeStart = "(function(){\n$._log=''\n";
+        var codeEnd = "\nreturn $._log;})();";
+
+        var fullCode = codeStart + code + codeEnd;
+        console.log(fullCode);
         
-        console.log(code);
-        
-        csInterface.evalScript(code, function (result) {
+        csInterface.evalScript(fullCode, function (result) {
+            console.log("result:" + result);
             $("#resultTA").html(result.toString());
         });
         

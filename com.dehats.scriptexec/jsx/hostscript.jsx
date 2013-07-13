@@ -1,12 +1,13 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, regexp: true, indent: 4, maxerr: 50 */
 /*global $, Folder*/
 
-// Full debug mode
-$.level = 2;
 
 // Those are at the global level
 // to make them easily accessible from the
 // scripting interface
+
+
+$._log = "";
 
 function _inspect(obj) {
     var str = "";
@@ -14,14 +15,13 @@ function _inspect(obj) {
     for (z in obj) {
         if (obj.hasOwnProperty(z)) {
             try {
-                if(obj[z]) str += "." + z + " (" + typeof(obj[z]) + "):" + obj[z] + "\n";
-            }
-            catch(e){
+                if (obj[z]) str += "." + z + " (" + typeof (obj[z]) + "):" + obj[z] + "\n";
+            } catch(e) {
                 str += "." + z + ":" + e.toString() + "\n";
             }
         }
     }
-    return str;
+    $._log += str;
 }
 
 function _props(obj) {
@@ -30,11 +30,11 @@ function _props(obj) {
     for (z in obj) {
         str += "." + z + "\n";
     }
-    return str;
+    $._log += str;
 }
 
 function log(msg) {
-    return msg+"\n";
+    $._log += msg + "\n";
 }
 
 
